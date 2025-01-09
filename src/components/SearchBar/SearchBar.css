@@ -1,0 +1,124 @@
+@keyframes slideDownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-wrapper {
+  position: relative; /* Ensures child elements use it as a reference */
+  background: #fef3c7;
+  height: 150px;
+  z-index: 1; /* Lower than search-container */
+  overflow: visible; /* Ensures no clipping occurs */
+}
+
+.search-container {
+  position: relative; /* Keeps it within the stacking context of search-wrapper */
+  top: -40px; /* Adjusted to move upwards */
+  margin: 0 auto;
+  padding: 2em 16px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  max-width: 985px;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensure it appears above other elements */
+  animation: slideDownFadeIn 2s ease-out forwards;
+}
+
+.search-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(to right, #fef3c7, #f59e0b);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1; /* Places this behind the main container */
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  position: relative;
+  width: 100%;
+  z-index: 5;
+}
+
+.search-icon {
+  font-size: 16px; /* Adjust icon size */
+  position: absolute; /* Position it inside the input field */
+  left: 10px; /* Space from the left side */
+  pointer-events: none; /* Prevent it from interfering with input interactions */
+}
+
+.input-container input {
+  border: 1px solid #d4d4d4;
+  outline: none;
+  font-size: 16px;
+  flex: 1;
+  padding: 10px 10px 10px 30px;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  margin-right: 10px;
+  transition: box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition */
+}
+
+.input-container input::placeholder {
+  color: #888888;
+  padding-left: 10px;
+}
+
+.input-container input:focus {
+  border: 2px solid #FBBF24;
+  box-shadow: 0 0 4px #FBBF24;
+}
+
+.search-btn {
+  background: #b45309;
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #9b4c0c;
+}
+
+@media (max-width: 640px) {
+  .search-container {
+    margin-top: -24px;
+  }
+
+  .search-button {
+    padding: 8px 16px;
+  }
+}
+
+.background-image {
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}

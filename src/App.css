@@ -1,0 +1,33 @@
+#root {
+  flex: 1;
+}
+
+body {
+  font-family: 'Inter';
+}
+
+h1, p {
+  font-family: 'Noto Serif HK', sans-serif;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif,;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+}
+
+/* defaults button */
+button {
+  outline: none; 
+  border: none;  
+}
+
+button:focus {
+  outline: none;
+}
+
+.button:hover {
+  background: #78350F;
+}

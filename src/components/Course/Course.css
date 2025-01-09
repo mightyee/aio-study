@@ -1,0 +1,234 @@
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add delay for each consecutive item */
+.school-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.school-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.school-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.container-wrapper {
+  width: 100%;
+  display: flex;
+  background: linear-gradient(180deg, #fef3c7 0%, #ffffff 100%);
+  height: calc(100vh - 40px);
+}
+
+.popular-schools-container {
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+  width: 1350px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.schools-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.schools-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.schools-list {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.school-item {
+  position: relative;
+  padding: 24px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.school-item:focus-within,
+.school-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.schools-header h2 {
+  font-size: 24px;
+  color: #333;
+  font-family: 'Noto Serif HK';
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 50.4px;
+  margin-right: 10px;
+}
+
+.help-icon {
+  width: 26.67px;
+  height: 26.67px;
+}
+
+.school-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.facility-name {
+  color: #1d4ed8;
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.bookmarks-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.school-details {
+    display: flex;
+    flex-wrap: wrap;
+      flex-direction: row;
+  gap: 20px;
+}
+
+.address-container {
+  align-items: center;
+  gap: 10px;
+  width: 376px;
+  height: 66px;
+  gap: 12px;
+  border-radius: 8px;
+}
+
+.building-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.address-text {
+  color: #525252;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.update-info {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+
+  padding: 8px 16px 8px 16px;
+  gap: 24px;
+  border-radius: 8px;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-label {
+  color: #666;
+  font-size: 12px;
+}
+
+.date {
+  color: #333;
+}
+
+.institution-type {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #d97706;
+  background: #fafafa;
+  border-radius: 99px;
+  padding: 8px 16px 8px 16px;
+}
+
+.dot {
+  color: #d97706;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background: transparent;
+}
+
+.more-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 20px;
+  border: 1px solid #b36a3e;
+  border-radius: 4px;
+  background: white;
+  color: #b36a3e;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.more-button:hover {
+  background: #78350f;
+}
+
+
+/* @media (max-width: 780px) {
+    .popular-schools-container {
+        width: 780px;
+    }
+  }
+
+@media (max-width: 480px) {
+    .popular-schools-container {
+        width: 400px;
+    }
+  } */

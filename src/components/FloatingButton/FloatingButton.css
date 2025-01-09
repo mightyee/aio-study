@@ -1,0 +1,51 @@
+/* Floating button styles */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: rgba(245, 245, 245, 1);
+    background-color: #fff7e6;
+    box-shadow: 0px 2px 4px 2px #00000026;
+    cursor: pointer;
+    transition: width 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+    padding: 12px 12px 12px 16px;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px;
+    z-index: 99;
+  }
+  
+  /* Hover effect expands the button */
+  .floating-button:hover {
+    width: 125px;
+    padding: 12px 12px 12px 16px;
+  }
+  
+  /* Icon inside the button */
+  .icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Button text (hidden by default) */
+  .button-text {
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    display: none;
+  }
+  
+  /* Show text on hover */
+  .floating-button:hover .button-text {
+    display: block;
+    opacity: 1;
+  }
+  

@@ -1,0 +1,74 @@
+/* Keyframes for Slide Down and Fade In */
+@keyframes slideDownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Class */
+.hero-container.animate-slide-fade {
+  animation: slideDownFadeIn 2s ease-out forwards;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  position: relative;
+  background: url('../../assets/BannerBg.png') no-repeat center center;
+  background-size: cover;
+  padding: 50px 20px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content {
+  width: 1350px;
+  margin: 0 auto;
+}
+
+.hero-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #171717;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #b45309;
+  line-height: 57px;
+}
+
+.hero-content p {
+  font-size: 22px;
+  font-weight: 400;
+  color: #171717;
+}
+
+.hero-button {
+  background-color: #b45309;
+  color: #fff;
+  border: none;
+  height: 56px;
+  padding: 10px 16px 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button:hover {
+  background-color: #78350f;
+}

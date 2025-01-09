@@ -1,0 +1,83 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #fdf5e6; /* Cream color */
+    padding: 0px 50px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .navbar-logo img {
+    height: 2rem;
+  }
+  
+  .navbar-logo span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f27a1a; /* Orange color */
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 4rem;
+    max-width: 1350px;
+  }
+  
+  .navbar-links a {
+    color: #262626; /* Gray */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navbar-links a:hover {
+    color: #f27a1a; /* Orange */
+    text-decoration: underline;
+  }
+
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .navbar-actions button {
+    background: none;
+    border: none;
+    color: #f27a1a;
+    cursor: pointer;
+  }
+  
+  .navbar-actions button:hover {
+    text-decoration: underline;
+  }
+  
+  .navbar-actions .contact {
+    color: #4a4a4a; /* Gray */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navbar-actions .contact:hover {
+    color: #f27a1a; /* Orange */
+  }
+  
+  .navbar-actions .login {
+    background-color: #f27a1a; /* Orange */
+    color: #ffffff; /* White */
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar-actions .login:hover {
+    opacity: 0.9;
+  }
+  
