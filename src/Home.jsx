@@ -8,14 +8,14 @@ import Course from './components/Course/Course';
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Header />
       <Hero />
       <SearchBar />
       <Course />
       <FloatingButton />
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -1,9 +1,9 @@
 import './App.css';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Home';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Routes>
@@ -11,6 +11,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
